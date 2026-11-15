@@ -42,6 +42,12 @@ npm run preview
 
 El build de producción se genera en `dist/`. `npm run preview` sirve localmente ese build.
 
+## Despliegue en GitHub Pages
+
+En **Settings → Pages → Build and deployment → Source**, selecciona **GitHub Actions**. El workflow existente compila la aplicación con Vite y publica `dist/` en cada push a `main`, o manualmente desde la pestaña **Actions** mediante **Run workflow**.
+
+Si el despliegue falla con un error 404 al crear el deployment, verifica que GitHub Pages esté habilitado y que la fuente sea **GitHub Actions**; después vuelve a ejecutar el workflow. La opción **Deploy from a branch** publica el código fuente con Jekyll, no el build de Vite.
+
 ## Estructura del proyecto
 
 ```text

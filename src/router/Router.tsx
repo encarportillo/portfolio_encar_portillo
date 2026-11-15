@@ -23,4 +23,6 @@ export const Router = createBrowserRouter([
       { path: 'educacion', element: <EducacionPage /> },
     ],
   },
-])
+], {
+  basename: import.meta.env.BASE_URL,
+})

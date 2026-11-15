@@ -1,78 +1,69 @@
-# React + TypeScript + Vite
+# Portafolio de Encar Portillo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal desarrollado con React, TypeScript y Vite para presentar proyectos de ciencia de datos, analítica y desarrollo de software.
 
-Currently, two official plugins are available:
+## Contenido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Inicio**: presentación y acceso a las secciones del portafolio.
+- **Sobre mí**: perfil profesional.
+- **Sobre mí**: resumen completo de mi experiencia profesional y formación académica.
+- **Proyectos**: proyectos destacados.
+- **Skills, certificaciones y educación**: herramientas, credenciales y formación.
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React 19 y TypeScript
+- Vite 8
+- React Router 7
+- Tailwind CSS 4
+- ESLint
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Requisitos
 
-## Expanding the ESLint configuration
+- Node.js 22.12 o posterior (o Node.js 20.19 o posterior)
+- npm
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Desarrollo local
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Vite mostrará la dirección local en la terminal, normalmente `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Validación y build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run lint
+npm run build
+npm run preview
 ```
+
+El build de producción se genera en `dist/`. `npm run preview` sirve localmente ese build.
+
+## Estructura del proyecto
+
+```text
+src/
+├── components/     # Componentes compartidos
+├── images/         # Imágenes y gráficos de los proyectos
+├── layout/         # Layout público
+├── pages/          # Páginas principales del portafolio
+├── projects/       # Páginas de detalle de proyectos
+└── router/         # Rutas de React Router
+public/             # Archivos estáticos servidos sin transformación
+```
+
+## Scripts disponibles
+
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia el servidor de desarrollo |
+| `npm run build` | Ejecuta el chequeo TypeScript y crea el build |
+| `npm run preview` | Sirve localmente el build de producción |
+| `npm run lint` | Ejecuta ESLint |
+
+## Licencia y contacto
+
+Este repositorio presenta proyectos y materiales del portafolio personal. Para consultas profesionales, visita los enlaces de contacto publicados en el sitio.

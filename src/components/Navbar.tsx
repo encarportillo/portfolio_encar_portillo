@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import cvPdf from '../docs/Encar Portillo Data Analyst.pdf'
+import cvPdf from '../docs/CV_Encar_Portillo_Data_Scientist.pdf'
 
 const navLinks = [
     {label: 'Sobre mí', to: '/about-me'},

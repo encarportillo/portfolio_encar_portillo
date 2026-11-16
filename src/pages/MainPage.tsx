@@ -3,7 +3,7 @@ import bannerImg from '../images/Header.jpg'
 import gitLogo from '../images/gitLogo.png'
 import inLogo from '../images/inLogo.png'
 import mailLogo from '../images/mailLogo.jpg'
-import cvPdf from '../docs/Encar Portillo Data Analyst.pdf'
+import cvPdf from '../docs/CV_Encar_Portillo_Data_Scientist.pdf'
 import InfoCard from '../components/InfoCard'
 
 const leftCards = [
@@ -21,7 +21,7 @@ const leftCards = [
   },
   {
     title: 'Certificaciones',
-    description: 'Certificado por Google Cloud, OpenEDG Python Institute y LinkedIn Learning.',
+    description: 'Certificado por Google Cloud, Google Analytics y OpenEDG Python Institute.',
     linkLabel: 'Ver certificados',
     to: '/certificaciones',
   },
@@ -78,7 +78,7 @@ function MainPage() {
           </a> */}
           <div className="mt-1 flex items-center gap-3">
             <a
-              href="https://www.linkedin.com/in/encar-portillo-3b124211a/"
+              href="https://www.linkedin.com/in/encarportillo"
               target="_blank"
               rel="noopener noreferrer"
               className="opacity-70 transition-opacity hover:opacity-100"

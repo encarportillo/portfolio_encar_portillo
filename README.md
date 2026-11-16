@@ -6,7 +6,7 @@ Portafolio personal desarrollado con React, TypeScript y Vite para presentar pro
 
 - **Inicio**: presentación y acceso a las secciones del portafolio.
 - **Sobre mí**: perfil profesional.
-- **Sobre mí**: resumen completo de mi experiencia profesional y formación académica.
+- **Currículum**: resumen completo de mi experiencia profesional y formación académica.
 - **Proyectos**: proyectos destacados.
 - **Skills, certificaciones y educación**: herramientas, credenciales y formación.
 

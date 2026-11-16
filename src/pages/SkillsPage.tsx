@@ -10,14 +10,41 @@ import excelLogo from '../images/excelLogo.webp'
 import reactLogo from '../images/reactlogo.webp'
 import gitLogo from '../images/gitLogo.png'
 import typelogo from '../images/typelogo.webp'
+import airflowlogo from '../images/airflowLogo.png'
+import dockerlogo from '../images/dockerLogo.png'
+import fastapilogo from '../images/FastAPILogo.png'
+import scikitlearnlogo from '../images/scikitLearnLogo.png'
+import xgboostlogo from '../images/XGBoostLogo.png'
 
-const stack = [
+
+type SkillLogo = {
+  name: string
+  src?: string
+  mark?: string
+}
+
+type SkillCategory = {
+  title: string
+  logos: SkillLogo[]
+}
+
+const stack: SkillCategory[] = [
   {
     title: 'Data Science',
     logos: [
       { name: 'Python', src: pythonLogo },
       { name: 'SQL', src: sqlLogo },
       { name: 'BigQuery', src: bigqueryLogo },
+    ],
+  },
+  {
+    title: 'ML & MLOps',
+    logos: [
+      { name: 'Scikit-Learn', src: scikitlearnlogo },
+      { name: 'XGBoost', src: xgboostlogo },
+      { name: 'FastAPI', src: fastapilogo },
+      { name: 'Docker', src: dockerlogo },
+      { name: 'Airflow', src: airflowlogo },
     ],
   },
   {
@@ -73,15 +100,26 @@ function SkillsPage() {
             >
               <div className="flex items-center justify-between gap-3">
                 <h3 className="font-medium text-gray-800">{title}</h3>
-                <div className="flex -space-x-2">
-                  {logos.map(({ name, src }) => (
-                    <img
-                      key={name}
-                      src={src}
-                      alt={name}
-                      className="h-10 w-10 rounded-full border-2 border-gray-50 bg-white object-contain p-1 shadow-sm"
-                    />
-                  ))}
+                <div className="flex flex-wrap justify-end gap-1">
+                  {logos.map(({ name, src, mark }) =>
+                    src ? (
+                      <img
+                        key={name}
+                        src={src}
+                        alt={name}
+                        className="h-10 w-10 rounded-full border-2 border-gray-50 bg-white object-contain p-1 shadow-sm"
+                      />
+                    ) : (
+                      <span
+                        key={name}
+                        aria-label={name}
+                        title={name}
+                        className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gray-50 bg-blue-100 text-[10px] font-bold text-blue-700 shadow-sm"
+                      >
+                        {mark}
+                      </span>
+                    ),
+                  )}
                 </div>
               </div>
 
@@ -92,9 +130,18 @@ function SkillsPage() {
               >
                 <div className="flex min-h-0 flex-col gap-4">
                   <div className="flex flex-wrap justify-center gap-6">
-                    {logos.map(({ name, src }) => (
+                    {logos.map(({ name, src, mark }) => (
                       <div key={name} className="flex flex-col items-center gap-2">
-                        <img src={src} alt={name} className="h-24 w-24 object-contain" />
+                        {src ? (
+                          <img src={src} alt={name} className="h-24 w-24 object-contain" />
+                        ) : (
+                          <span
+                            aria-hidden="true"
+                            className="flex h-24 w-24 items-center justify-center rounded-full bg-blue-100 text-2xl font-bold text-blue-700"
+                          >
+                            {mark}
+                          </span>
+                        )}
                         <span className="text-xs text-gray-600">{name}</span>
                       </div>
                     ))}

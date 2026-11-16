@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createHashRouter } from 'react-router-dom'
 
 import PublicLayout from '../layout/PublicLayout'
 import MainPage from '../pages/MainPage'
@@ -9,7 +9,7 @@ import CertificacionesPage from '../pages/CertificacionesPage'
 import EducacionPage from '../pages/EducacionPage'
 import TelecomChurnPage from '../projects/telecom-churn'
 
-export const Router = createBrowserRouter([
+export const Router = createHashRouter([
   {
     path: '/',
     element: <PublicLayout />,
@@ -23,6 +23,4 @@ export const Router = createBrowserRouter([
       { path: 'educacion', element: <EducacionPage /> },
     ],
   },
-], {
-  basename: import.meta.env.BASE_URL,
-})
+])

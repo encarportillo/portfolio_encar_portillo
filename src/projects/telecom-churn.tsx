@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import businessHypothesesChart from '../images/1_Visualización de Hipótesis de Negocio.png'
-import technologyCorrelationChart from '../images/2_Cruce Tecnológico y Matriz de Correlación.png'
-import baselineCurvesChart from '../images/3_Análisis de Curvas y Viabilidad Operativa.png'
-import precisionRecallChart from '../images/4_Curvas Precision_Recall Baseline vs XGBoost Optimizado.png'
-import shapBeeswarmChart from '../images/5_Impacto Global de Variables en la Probabilidad de Churn (SHAP Beeswarm).png'
-import shapWaterfallChart from '../images/6_Waterfall Plot para un Cliente Específico en Riesgo.png'
+import businessHypothesesChart from '../images/1_Visualizacion_de_hipotesis_de_negocio.png'
+import technologyCorrelationChart from '../images/2_Cruce_tecnologico_y_matriz_de_correlacion.png'
+import baselineCurvesChart from '../images/3_Analisis_de_curvas_y_viabilidad_operativa.png'
+import precisionRecallChart from '../images/4_Curvas_precision_recall_baseline_vs_XGBoost_Optimizado.png'
+import shapBeeswarmChart from '../images/5_Impacto_global_de_variables_en_la_probabilidad_de_churn_SHAP_Beeswarm.png'
+import shapWaterfallChart from '../images/6_Waterfall_plot_para_un_cliente_especifico_en_riesgo.png'
 
 const GITHUB_REPO = 'https://github.com/encarportillo/telecom-churn-intelligence'
 
@@ -239,13 +239,13 @@ function TelecomChurnPage() {
             </span>
             <p className="mt-2 text-sm leading-relaxed text-blue-950">
               Los primeros Insights evaluados del dataset nos aportan las primeras preguntas a considerar:
-              <dl>
+            </p>
+            <dl className="mt-3 text-sm leading-relaxed text-blue-950">
                 <li>¿A quién deberíamos llamar primero?</li>
                 <li>¿Por qué un cliente está en riesgo de Churn?</li>
                 <li>¿Qué podemos hacer para evitar el Churn?</li>
-              </dl>
-              <br></br>
-            </p>
+            </dl>
+            <br></br>
             <p className="mt-3 text-xs leading-relaxed text-blue-800">
               Para responderlo, combinamos un análisis de la cartera actual con modelos que predicen y explican cada caso. 
               Todo esto acompañado de una estimación realista de lo que podrías recuperar, planteada como una proyección y no como un resultado garantizado.
@@ -326,7 +326,7 @@ function TelecomChurnPage() {
             <br></br>
             <p className="mt-2 text-sm leading-relaxed text-gray-600">
               Los servicios de valor pueden crear adhesión, al observar el gráfico se muestra una tasa alta en clientes con un solo servicio adicional (~46%) y
-              una tendencia menor de churn al sumar varios. Sin emabrgo scnviene revisar el paquete y el soporte, no
+              una tendencia menor de churn al sumar varios. Sin embargo, conviene revisar el paquete y el soporte, no
               asumir que agregar cualquier servicio reduce el churn.
             </p>
           </article>
@@ -442,18 +442,18 @@ function TelecomChurnPage() {
           number="05"
           eyebrow="Explicabilidad del modelo"
           title="Análisis de explicabilidad del modelo XGBoost con SHAP"
-          description="A través de SHAP podemos observar qué muestra de atributos desplazan cada predicción. 
-          Éstas explicaciones ayudan a diseñar y auditar intervenciones por lo que no se recomienda que se interpreten  como causas demostradas."
+          description="A través de SHAP podemos observar qué combinación de atributos desplaza cada predicción. 
+          Estas explicaciones ayudan a diseñar y auditar intervenciones, aunque no deben interpretarse como relaciones causales demostradas."
         />
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
             <h3 className="font-semibold text-gray-900">Señales globales</h3>
             <br></br>
-            <p className="mt-2 text-sm leading-relaxed text-gray-600">
+            <p className="mt-3 text-sm leading-relaxed text-gray-600">
               El contrato mensual, la antigüedad, los cargos mensuales, servicios adicionales (SVA) y la señal de
               fibra sin soporte aparecen entre los principales factores que determinan el churn. La antigüedad y contar con
-              (SVA) suelen empujar la predicción hacia un menor riesgo de churn; mientras que cargos altos y un tipo de contrato
+              SVA suelen empujar la predicción hacia un menor riesgo de churn; mientras que cargos altos y un tipo de contrato
               mensual, empujan la predicción hacia un mayor riesgo de churn.
             </p>
           </div>

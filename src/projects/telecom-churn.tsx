@@ -169,6 +169,18 @@ function TelecomChurnPage() {
           Flujo de datos y machine learning
           diseñado para priorizar clientes en riesgo y explicar por qué podrían irse.
         </p>
+        <p className="max-w-3xl text-lg leading-relaxed text-gray-600">
+          <b>Origen de los datos:</b> para este proyecto se utilizaron los datos públicos alojados en la plataforma Kaggle:  
+          <a 
+            href='https://www.kaggle.com/datasets/yeanzc/telco-customer-churn-ibm-dataset'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="max-w-3xl text-lg leading-relaxed text-blue-600" >
+              <b> 
+                <u> Telco customer churn: IBM dataset</u>
+                </b>
+          </a>
+        </p>
 
         <div className="flex flex-wrap justify-center gap-2">
           {techStack.map((tech) => (
